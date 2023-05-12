@@ -1,5 +1,6 @@
-# Luke's build of dwm
+# aj10k's build of dwm
 
+A fork from LukeSmith/dwm with a very few adjustemnt for my liking
 ## FAQ
 
 > What are the bindings?
@@ -28,7 +29,6 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 ## Installation for newbs
 
 ```bash
-#git clone https://github.com/LukeSmithxyz/dwm.git
 git clone https://github.com/aj10k/dwm.git
 cd dwm
 sudo make install
