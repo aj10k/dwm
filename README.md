@@ -1,6 +1,6 @@
 # aj10k's build of dwm
 
-A fork from LukeSmith/dwm with a few adjustemnts
+A fork from LukeSmith/dwm with a few adjustments
 ## FAQ
 
 > What are the bindings?
