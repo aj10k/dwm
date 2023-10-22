@@ -5,6 +5,7 @@
 #define TERMCLASS "St"
 #define BROWSER "librewolf"
 
+
 /* appearance */
 static unsigned int borderpx  = 5;        /* 8 hidpi - border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
@@ -160,7 +161,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 
 	{ MODKEY,			XK_Tab,		view,		{0} },
-	{ MODKEY|ShiftMask,		XK_Tab,		spawn,		{.v = (const char*[]){	"qbm", NULL } } },
+	{ MODKEY|ShiftMask,		XK_Tab,		spawn,		{.v = (const char*[]){	"qpm", NULL } } },
 	{ MODKEY,			XK_q,		killclient,	{0} },
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 	{ MODKEY,			XK_w,		spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
@@ -193,7 +194,7 @@ static const Key keys[] = {
 	{ MODKEY,			XK_s,		spawn,		{.v = (const char*[]){	"ytlocal", NULL } } },
 	{ MODKEY|ShiftMask,		XK_s,		togglesticky,	{0} },
 	{ MODKEY,			XK_d,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
-	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
+	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", "--type", NULL } } },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
@@ -288,8 +289,8 @@ static const Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,	spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,	spawn,		{.v = (const char*[]){ "synclient", "TouchpadOff=1", NULL } } },
 	{ 0, XF86XK_TouchpadOn,		spawn,		{.v = (const char*[]){ "synclient", "TouchpadOff=0", NULL } } },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		{.v = (const char*[]){ "xbacklight", "-inc", "15", NULL } } },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		{.v = (const char*[]){ "xbacklight", "-dec", "15", NULL } } },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		{.v = (const char*[]){ "sudo", "sob", "-i", "15", NULL } } },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		{.v = (const char*[]){ "sudo", "sob", "-d", "15", NULL } } },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
